@@ -40,6 +40,8 @@ public class ProjectIdentificationRequestReviewIntegrationTest {
 
     @BeforeEach
     void createProject() throws Exception {
+        String test = "test";
+
         MockHttpServletResponse response = mockMvc.perform(post("/project/saveAjax")
                 .param("copy", "false")
                 .param("prjName", UUID.randomUUID().toString())
